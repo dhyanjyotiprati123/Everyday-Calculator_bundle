@@ -1,23 +1,29 @@
 {
   "expo": {
-    "name": "Everyday Tools",
-    "slug": "everyday-tools",
+    "name": "Calcular Bundle",
+    "slug": "calcular-bundle",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "scheme": "everydaytools",
+    "scheme": "calcularbundle",
     "userInterfaceStyle": "light",
     "ios": {
       "supportsTablet": true
     },
     "android": {
-      "package": "com.everydaytools.app",
+      "package": "com.dhyanjyoti.calculators",
+      "versionCode": 1,
       "adaptiveIcon": {
-        "backgroundColor": "#E9EDFF",
+        "backgroundColor": "#5C72CF",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
-      }
+      },
+      "blockedPermissions": [
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.SYSTEM_ALERT_WINDOW"
+      ]
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -25,7 +31,8 @@
     "plugins": [
       "expo-router",
       "expo-font",
-      "@react-native-community/datetimepicker"
+      "@react-native-community/datetimepicker",
+      "./plugins/withAndroidRelease"
     ]
   }
 }

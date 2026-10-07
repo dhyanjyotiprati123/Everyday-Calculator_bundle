@@ -119,6 +119,6 @@ export function buildShareText(title, result) {
   const lines = [title, `${result.primary.label}: ${result.primary.value}`];
   if (result.primary.caption) lines.push(result.primary.caption);
   for (const row of result.rows ?? []) lines.push(`${row.label}: ${row.value}`);
-  lines.push('', 'Calculated with Everyday Tools');
+  lines.push('', 'Calculated with Calcular Bundle');
   return lines.join('\n');
 }
